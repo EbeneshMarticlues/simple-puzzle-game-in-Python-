@@ -1,0 +1,19 @@
+import random
+
+def puzzle_game():
+    print("Welcome to the Puzzle Game!")
+    print("The objective is to guess a number between 1 and 100.")
+    number = random.randint(1, 100)
+    guess = None
+    attempts = 0
+    while guess != number:
+        guess = int(input("Enter your guess: "))
+        if guess < number:
+            print("Too low.")
+        elif guess > number:
+            print("Too high.")
+        attempts += 1
+    print(f"You got it in {attempts} attempts!")
+
+if __name__ == "__main__":
+    puzzle_game()
