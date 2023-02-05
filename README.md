@@ -10,30 +10,4 @@ Add difficulty levels (e.g. guess a number between 1 and 1000).
 Provide hints to the player (e.g. whether the number is even or odd).
 Keep score and allow the player to play multiple rounds.
 
-import random
-
-def puzzle_game():
-    print("Welcome to the Puzzle Game!")
-    print("The objective is to guess a number between 1 and 100.")
-    number = random.randint(1, 100)
-    guess = None
-    attempts = 0
-    previous_guesses = []
-    while guess != number and attempts < 10:
-        guess = int(input("Enter your guess: "))
-        if guess < number:
-            print("Too low.")
-        elif guess > number:
-            print("Too high.")
-        attempts += 1
-        previous_guesses.append(guess)
-        print(f"Previous guesses: {previous_guesses}")
-    if guess == number:
-        print(f"You got it in {attempts} attempts!")
-    else:
-        print(f"You have reached the maximum number of attempts. The number was {number}.")
-
-if __name__ == "__main__":
-    puzzle_game()
-
 
